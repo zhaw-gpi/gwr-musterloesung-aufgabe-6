@@ -19,29 +19,24 @@ import javax.validation.constraints.Size;
 public class DwellingEntity implements Serializable {
     // Wohnungsnummer
     @Id
-    @NotNull
     @Size(min = 1, max = 12)
     private String whgNr;
 
     // Stockwerk
-    @NotNull
     @Min(value = 3100)
     @Max(value = 3419)
     private int wStwk;
 
     // Mehrgeschossigkeit (1 = ja, 2 = nein)
-    @NotNull
     @Min(value = 1)
     @Max(value = 2)
     private int wMehrG;
 
     // Lage auf dem Stockwerk
-    @NotNull
     @Size(min = 3, max = 40)
     private String wBez;
 
     // Anzahl Zimmer
-    @NotNull
     @Min(value = 1)
     @Max(value = 99)
     private int wAZim;

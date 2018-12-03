@@ -17,22 +17,22 @@ import javax.validation.constraints.Size;
 public class BuildingEntity implements Serializable {
     // Eidgenössischer Gebäudeidentifikator
     @Id
+    @Min(value=1L)
+    @Max(value=900000000L)
     private int egid;
 
     // Postleitzahl
     @NotNull
     @Min(value = 1000)
-    @Max(value = 9999)
+    @Max(value = 9699)
     private int dplz4;
 
     // Strassenname
-    @NotNull
     @Size(max = 60)
     private String strName;
 
     // Hauseingangsnummer
-    @NotNull
-    @Size(min = 1, max = 12)
+    @Size(max = 12)
     private String deinr;
 
     // GETTER und SETTER
